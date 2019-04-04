@@ -1,8 +1,23 @@
 package org.example;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "empregado")
 public class Empregado {
+
+	@Id
+	@GeneratedValue
+	@Column(name = "id")
 	private int id;
+	
+	@Column(name  = "nome")
 	private String nome;
+	
 	private int salario;
 
 	public Empregado() {
@@ -12,7 +27,7 @@ public class Empregado {
 		this.nome = nome;
 		this.salario = salario;
 	}
-	
+
 	// Getters e Setters
 
 	public int getId() {

@@ -11,7 +11,7 @@ public class Exemplo {
 	public static void main(String[] args) {
 		SessionFactory mFactory = null;
 		Configuration cfg = new Configuration();
-		cfg.addClass(org.example.Empregado.class);
+		cfg.addAnnotatedClass(org.example.Empregado.class);
 
 		try {
 			mFactory = cfg.configure().buildSessionFactory();
